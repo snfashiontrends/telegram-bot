@@ -20,7 +20,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_message = update.message.text
     await update.message.chat.send_action("typing")
     if user_id not in chat_histories:
-        chat_histories[user_id] = [{"role": "system", "content": "Aap ek helpful AI assistant hain. Urdu aur Hindi mein baat kar sakte hain."}]
+        chat_histories[user_id] = [{"role": "system", "content": "You are a helpful AI assistant. Always respond in the same language the user is using - Hindi or English."}]
     chat_histories[user_id].append({"role": "user", "content": user_message})
     try:
         response = client.chat.completions.create(
