@@ -1,3 +1,7 @@
 groq
 python-telegram-bot
-gTTS
+PyPDF2
+python-docx
+openpyxl
+Pillow
+httpx
